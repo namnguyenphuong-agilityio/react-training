@@ -24,7 +24,6 @@
 ## Getting Started
 
 - Clone repository from GitLab  
-
 ```git clone git@gitlab.asoft-python.com:nam.nguyenphuong/react-training.git```
 
 - Checkout branch   
