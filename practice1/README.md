@@ -23,17 +23,18 @@
 
 ## Getting Started
 
-Clone repository from GitLab 
-`git clone git@gitlab.asoft-python.com:nam.nguyenphuong/react-training.git`
+- Clone repository from GitLab  
 
-Checkout branch 
-`git checkout -b feature/practice1`
+```git clone git@gitlab.asoft-python.com:nam.nguyenphuong/react-training.git```
 
-Change directory
-`cd practice1`
+- Checkout branch   
+```git checkout -b feature/practice1```
 
-Install dependencies
-`pnpm install`
+- Change directory   
+```cd practice1```
 
-Start local server
-`pnpm run dev`
+- Install dependencies   
+```pnpm install```
+
+- Start local server   
+```pnpm run dev```
