@@ -2,7 +2,7 @@
 
 ## Overview
 
-- This document provides the requirement for React Practice
+- Use React to build static E-commerce website
 - Design: [Shop](https://www.figma.com/file/q2xRhMCyIeQs0nxiew6Wk9/E-commerce-Website-Template-(Freebie)-(Community)?type=design&node-id=0-1&mode=design&t=OAZyTGlin42aaKxx-0)
 - Document Analysis: [Link](https://docs.google.com/document/d/1SHFQbFteBloQfQItL5E0HQ6fSKGcVK627kIwTDrL764/edit?usp=sharing)
 
@@ -12,14 +12,23 @@
 - Build a static page with reuse components
 - Apply knowledge of React and TypeScript
 - Get familiar with JSX syntax and React TypeScript
+- Use Storybook for documenting React components
 
 
-## Technical Stack
+## Tech Stacks
 
-- React [version 18.2.0]
-- TypeScript [version 5.2.2]
-- Eslint [version 8.57.0]
+- React: version 18.2.0
+- Vite: version 5.2.0
+- TypeScript: version 5.2.2
+- Storybook: version 8.0.10
+
+## PREREQUISITES
+
+- Eslint: version 8.57.0
+- Prettier: version 3.1.0
+- Husky: version 8.0.0
 - Editor: Visual Studio Code
+
 
 ## Getting Started
 
