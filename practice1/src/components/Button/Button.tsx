@@ -5,6 +5,7 @@ interface ButtonProps {
   color?: 'black' | 'white' | 'lightGray';
   size: 'small' | 'medium' | 'large';
   label: string;
+  isFullWidth?: boolean;
   onClick?: () => void;
 }
 
@@ -40,14 +41,16 @@ export const Button = ({
   size = 'medium',
   color,
   label,
+  isFullWidth = false,
   ...props
 }: ButtonProps) => {
   const variantClass = getVariantClass(variant);
   const colorClass = getColorClass(color);
+  const fullWidthClass = isFullWidth ? 'button--block' : '';
   return (
     <button
       type="button"
-      className={['button', `button--${size}`, variantClass, colorClass].join(' ')}
+      className={`button button--${size} ${variantClass} ${colorClass} ${fullWidthClass}`}
       {...props}
     >
       {label}

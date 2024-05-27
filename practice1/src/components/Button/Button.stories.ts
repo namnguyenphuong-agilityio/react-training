@@ -6,7 +6,7 @@ const meta = {
   title: 'Example/Button',
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
   args: { onClick: fn() },
@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    size: 'large',
+    size: 'medium',
     variant: 'primary',
     label: 'Button',
   },
@@ -25,23 +25,8 @@ export const Primary: Story = {
 
 export const Tertiary: Story = {
   args: {
-    size: 'large',
-    variant: 'tertiary',
-    label: 'Button',
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Medium: Story = {
-  args: {
     size: 'medium',
-    color:'black',
+    variant: 'tertiary',
     label: 'Button',
   },
 };
@@ -49,6 +34,44 @@ export const Medium: Story = {
 export const Small: Story = {
   args: {
     size: 'small',
+    label: 'Button',
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    size: 'medium',
+    label: 'Button',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'large',
+    label: 'Button'
+  },
+};
+
+export const FullWidth: Story = {
+  args: {
+    size: 'small',
+    isFullWidth: true,
+    label: 'Button',
+  },
+};
+
+export const Black: Story = {
+  args: {
+    size: 'medium',
+    color: 'black',
+    label: 'Button',
+  },
+};
+
+export const White: Story = {
+  args: {
+    size: 'medium',
+    color: 'white',
     label: 'Button',
   },
 };

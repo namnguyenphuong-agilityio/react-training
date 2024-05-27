@@ -4,6 +4,7 @@
   border-radius: 60px;
   cursor: pointer;
   color: #000000;
+  border: none;
 }
 
 .button--primary {
@@ -28,9 +29,7 @@
 
 .button--large {
   font-size: 14px;
-  padding: 16px 54px;
-  display: block;
-  width: 100%;
+  padding: 12px 24px;
 }
 
 .button--black {
@@ -43,3 +42,7 @@
   background-color: #FFFFFF;
 }
 
+.button--block {
+  width: 100%;
+  display: block;
+}
