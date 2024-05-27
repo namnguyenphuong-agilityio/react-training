@@ -14,7 +14,7 @@ interface ButtonProps {
 export const Button = ({
   variant = 'primary',
   size = 'medium',
-  color = 'black',
+  color,
   label,
   ...props
 }: ButtonProps) => {

@@ -18,14 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     variant: 'primary',
-    color: 'white',
-    label: 'Button',
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    color: 'black',
     label: 'Button',
   },
 };
@@ -34,7 +26,6 @@ export const Tertiary: Story = {
   args: {
     variant: 'tertiary',
     label: 'Button',
-    color: 'white',
   },
 };
 
@@ -48,6 +39,7 @@ export const Large: Story = {
 export const Medium: Story = {
   args: {
     size: 'medium',
+    color:'black',
     label: 'Button',
   },
 };
