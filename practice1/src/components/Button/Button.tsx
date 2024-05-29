@@ -1,7 +1,9 @@
 import './button.css';
 
-interface ButtonProps {
-  variant?: 'primary' | 'tertiary';
+// ButtonProps will now include all the standard properties of an HTML button element,
+// such as disabled, form, name, type, and value and TypeScript will type check these properties
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary';
   color?: 'black' | 'white' | 'lightGray';
   size: 'small' | 'medium' | 'large';
   label: string;
@@ -9,19 +11,12 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const getVariantClass = (variant?: string) => {
-  switch (variant) {
+const getClassName = (value?: string) => {
+  switch (value) {
     case 'primary':
       return 'button--primary';
-    case 'tertiary':
-      return 'button--tertiary';
-    default:
-      return '';
-  }
-};
-
-const getColorClass = (color?: string) => {
-  switch (color) {
+    case 'secondary':
+      return 'button--secondary';
     case 'black':
       return 'button--black';
     case 'white':
@@ -32,6 +27,7 @@ const getColorClass = (color?: string) => {
       return '';
   }
 };
+
 
 /**
  * Primary UI component for user interaction
@@ -44,8 +40,8 @@ export const Button = ({
   isFullWidth = false,
   ...props
 }: ButtonProps) => {
-  const variantClass = getVariantClass(variant);
-  const colorClass = getColorClass(color);
+  const variantClass = getClassName(variant);
+  const colorClass = getClassName(color);
   const fullWidthClass = isFullWidth ? 'button--block' : '';
   return (
     <button

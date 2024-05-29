@@ -23,10 +23,10 @@ export const Primary: Story = {
   },
 };
 
-export const Tertiary: Story = {
+export const Secondary: Story = {
   args: {
     size: 'medium',
-    variant: 'tertiary',
+    variant: 'secondary',
     label: 'Button',
   },
 };
