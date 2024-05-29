@@ -45,7 +45,6 @@ export const Button = ({
   const fullWidthClass = isFullWidth ? 'button--block' : '';
   return (
     <button
-      type="button"
       className={`button button--${size} ${variantClass} ${colorClass} ${fullWidthClass}`}
       {...props}
     >
