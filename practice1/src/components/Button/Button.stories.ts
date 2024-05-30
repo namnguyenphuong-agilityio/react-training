@@ -6,10 +6,10 @@ const meta = {
   title: 'Example/Button',
   component: Button,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'fullscreen'
   },
   tags: ['autodocs'],
-  args: { onClick: fn() },
+  args: { onClick: fn() }
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -19,60 +19,59 @@ export const Primary: Story = {
   args: {
     size: 'medium',
     variant: 'primary',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Secondary: Story = {
   args: {
     size: 'medium',
     variant: 'secondary',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Small: Story = {
   args: {
     size: 'small',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Medium: Story = {
   args: {
     size: 'medium',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Large: Story = {
   args: {
     size: 'large',
     label: 'Button'
-  },
+  }
 };
 
 export const FullWidth: Story = {
   args: {
     size: 'small',
     isFullWidth: true,
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const Black: Story = {
   args: {
     size: 'medium',
     color: 'black',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
 
 export const White: Story = {
   args: {
     size: 'medium',
     color: 'white',
-    label: 'Button',
-  },
+    label: 'Button'
+  }
 };
-

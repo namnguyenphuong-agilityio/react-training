@@ -9,7 +9,9 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
   ],
   "ignorePatterns": [
     "dist",
@@ -20,14 +22,11 @@
     "project": "./tsconfig.json"
   },
   "plugins": [
-    "react-refresh"
+    "react-refresh", "react"
   ],
   "rules": {
-    "react-refresh/only-export-components": [
-      "warn",
-      {
-        "allowConstantExport": true
-      }
-    ]
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities": 0
   }
 }
