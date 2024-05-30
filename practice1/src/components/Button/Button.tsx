@@ -43,9 +43,17 @@ export const Button = ({
   const variantClass = getClassName(variant);
   const colorClass = getClassName(color);
   const fullWidthClass = isFullWidth ? 'button--block' : '';
+const className = [
+    'button',
+    `button--${size}`,
+    variantClass,
+    colorClass,
+    fullWidthClass,
+  ].join(' ');
   return (
     <button
-      className={`button button--${size} ${variantClass} ${colorClass} ${fullWidthClass}`}
+      type="button"
+      className={className}
       {...props}
     >
       {label}
