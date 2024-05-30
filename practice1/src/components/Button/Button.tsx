@@ -11,22 +11,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
 }
 
-const getClassName = (value?: string) => {
-  switch (value) {
-    case 'primary':
-      return 'button--primary';
-    case 'secondary':
-      return 'button--secondary';
-    case 'black':
-      return 'button--black';
-    case 'white':
-      return 'button--white';
-    case 'lightGray':
-      return 'button--lightGray';
-    default:
-      return '';
-  }
-};
+const getClassName = (value?: string) => value ? `button--${value}` : '';
 
 
 /**
