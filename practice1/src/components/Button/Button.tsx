@@ -10,7 +10,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
 }
 
-const getClassName = (value?: string) => (value ? `button--${value}` : '');
+const getButtonClassName = (value?: string) => (value ? `button--${value}` : '');
 
 /**
  * Primary UI component for user interaction
@@ -22,9 +22,10 @@ export const Button = ({
   isFullWidth = false,
   ...props
 }: ButtonProps) => {
-  const variantClass = getClassName(variant);
+  const variantClass = getButtonClassName(variant);
+  const sizeClass = getButtonClassName(size);
   const fullWidthClass = isFullWidth ? 'button--block' : '';
-  const className = ['button', `button--${size}`, variantClass, fullWidthClass].join(
+  const className = ['button', sizeClass, variantClass, fullWidthClass].join(
     ' '
   );
   return (
