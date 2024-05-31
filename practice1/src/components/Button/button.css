@@ -9,18 +9,18 @@
   font-weight: 700;
   border-radius: 60px;
   cursor: pointer;
-  color: var(--primary-color);
   border: none;
 }
 
 .button--primary {
   border: 1px var(--button-border-color) solid;
-  background-color: transparent;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .button--secondary {
-  background-color: transparent;
   border: none;
+  background-color: var(--secondary-color);
 }
 
 .button--small {
@@ -36,16 +36,6 @@
 .button--large {
   font-size: 14px;
   padding: 12px 24px;
-}
-
-.button--black {
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
-}
-
-.button--white {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
 }
 
 .button--block {

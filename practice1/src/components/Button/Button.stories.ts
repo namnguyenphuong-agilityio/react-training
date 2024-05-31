@@ -59,19 +59,3 @@ export const FullWidth: Story = {
     label: 'Button'
   }
 };
-
-export const Black: Story = {
-  args: {
-    size: 'medium',
-    color: 'black',
-    label: 'Button'
-  }
-};
-
-export const White: Story = {
-  args: {
-    size: 'medium',
-    color: 'white',
-    label: 'Button'
-  }
-};

@@ -4,7 +4,6 @@ import './button.css';
 // such as disabled, form, name, type, and value and TypeScript will type check these properties
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
-  color?: 'black' | 'white' | 'lightGray';
   size: 'small' | 'medium' | 'large';
   label: string;
   isFullWidth?: boolean;
@@ -19,15 +18,13 @@ const getClassName = (value?: string) => (value ? `button--${value}` : '');
 export const Button = ({
   variant,
   size = 'medium',
-  color,
   label,
   isFullWidth = false,
   ...props
 }: ButtonProps) => {
   const variantClass = getClassName(variant);
-  const colorClass = getClassName(color);
   const fullWidthClass = isFullWidth ? 'button--block' : '';
-  const className = ['button', `button--${size}`, variantClass, colorClass, fullWidthClass].join(
+  const className = ['button', `button--${size}`, variantClass, fullWidthClass].join(
     ' '
   );
   return (
