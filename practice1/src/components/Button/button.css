@@ -1,14 +1,20 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #FFFFFF;
+  --button-border-color: #0000001A;
+}
+
 .button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border-radius: 60px;
   cursor: pointer;
-  color: #000000;
+  color: var(--primary-color);
   border: none;
 }
 
 .button--primary {
-  border: 1px #0000001A solid;
+  border: 1px var(--button-border-color) solid;
   background-color: transparent;
 }
 
@@ -33,13 +39,13 @@
 }
 
 .button--black {
-  color: #FFFFFF;
-  background-color: #000000;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .button--white {
-  color: #000000;
-  background-color: #FFFFFF;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .button--block {
