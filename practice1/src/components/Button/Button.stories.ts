@@ -33,6 +33,7 @@ export const Secondary: Story = {
 
 export const Small: Story = {
   args: {
+    variant: 'primary',
     size: 'small',
     label: 'Button'
   }
@@ -40,6 +41,7 @@ export const Small: Story = {
 
 export const Medium: Story = {
   args: {
+    variant: 'primary',
     size: 'medium',
     label: 'Button'
   }
@@ -47,6 +49,7 @@ export const Medium: Story = {
 
 export const Large: Story = {
   args: {
+    variant: 'primary',
     size: 'large',
     label: 'Button'
   }
@@ -54,6 +57,7 @@ export const Large: Story = {
 
 export const FullWidth: Story = {
   args: {
+    variant: 'primary',
     size: 'small',
     isFullWidth: true,
     label: 'Button'
