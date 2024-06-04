@@ -1,7 +1,5 @@
 :root {
-  --primary-color: #000000;
-  --secondary-color: #FFFFFF;
-  --button-border-color: #0000001A;
+  --button-border-color: var(--orange-color);
 }
 
 .button {
@@ -9,17 +7,21 @@
   font-weight: 700;
   border-radius: 60px;
   cursor: pointer;
-  border: none;
+  border: 1px solid transparent;
+}
+.button:hover,
+.button:focus,
+.button:active {
+  opacity: 0.8;
+  border-color: var(--button-border-color);
 }
 
 .button--primary {
-  border: 1px var(--button-border-color) solid;
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
 .button--secondary {
-  border: none;
   background-color: var(--secondary-color);
 }
 

@@ -1,3 +1,4 @@
+import '../../index.css';
 import './button.css';
 
 // ButtonProps will now include all the standard properties of an HTML button element,
