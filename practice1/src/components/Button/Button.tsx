@@ -30,7 +30,7 @@ export const Button = ({
     ' '
   );
   return (
-    <button type='button' className={className} {...props}>
+    <button className={className} {...props}>
       {label}
     </button>
   );
