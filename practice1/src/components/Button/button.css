@@ -1,0 +1,46 @@
+:root {
+  --button-border-color: var(--orange-color);
+}
+
+.button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border-radius: 60px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.button:hover,
+.button:focus,
+.button:active {
+  opacity: 0.8;
+  border-color: var(--button-border-color);
+}
+
+.button--primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.button--secondary {
+  background-color: var(--secondary-color);
+}
+
+.button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.button--large {
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+.button--block {
+  width: 100%;
+  display: block;
+}
