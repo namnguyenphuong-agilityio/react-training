@@ -1,8 +1,9 @@
 import { SVGProps } from 'react';
 
-const MasterCardIcon = ({ width = '57', height = '43' }: SVGProps<SVGSVGElement>) => {
+const MasterCardIcon = ({ width = '40', height = '26' }: SVGProps<SVGSVGElement>) => {
   const svgWidth = Number(width) + 8.2*2;
   const svgHeight = Number(height) + 5*2;
+  const strokeWidth = 0.1921;
   return(
   <svg
     width={svgWidth}
@@ -16,11 +17,11 @@ const MasterCardIcon = ({ width = '57', height = '43' }: SVGProps<SVGSVGElement>
       <rect
         x='8.14687'
         y='4.90395'
-        width={width}
-        height={height}
+        width={Number(width) + strokeWidth}
+        height={Number(height) + strokeWidth}
         rx='4.70645'
         stroke='#D6DCE5'
-        stroke-width='0.1921'
+        stroke-width={strokeWidth}
       />
       <path d='M31.0915 12.5845H25.2085V23.1565H31.0915V12.5845Z' fill='#FF5F00' />
       <path
@@ -84,4 +85,4 @@ const MasterCardIcon = ({ width = '57', height = '43' }: SVGProps<SVGSVGElement>
   );
 };
 
-export { MasterCardIcon };
+export default MasterCardIcon;
