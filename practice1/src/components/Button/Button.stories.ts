@@ -31,6 +31,14 @@ export const Secondary: Story = {
   }
 };
 
+export const Tertiary: Story = {
+  args: {
+    size: 'medium',
+    variant: 'tertiary',
+    label: 'Button'
+  }
+};
+
 export const Small: Story = {
   args: {
     variant: 'primary',
