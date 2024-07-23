@@ -1,5 +1,6 @@
 :root {
-  --button-border-color: var(--orange-color);
+  --button-border-color: var(--border-color);
+  --button-hover-border-color:var(--orange-color);
 }
 
 .button {
@@ -8,12 +9,14 @@
   border-radius: 60px;
   cursor: pointer;
   border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0;
 }
 .button:hover,
 .button:focus,
 .button:active {
-  opacity: 0.8;
-  border-color: var(--button-border-color);
+  opacity: 0.6;
+  border-color: var(--button-hover-border-color);
 }
 
 .button--primary {
@@ -23,6 +26,8 @@
 
 .button--secondary {
   background-color: var(--secondary-color);
+  border-color: var(--button-border-color);
+  color: var(--primary-color);
 }
 
 .button--small {
@@ -40,7 +45,3 @@
   padding: 12px 24px;
 }
 
-.button--block {
-  width: 100%;
-  display: block;
-}
