@@ -1,3 +1,5 @@
+@import './assets/fonts/stylesheet.css';
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,7 +45,7 @@ table {
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Satoshi', fallback-font, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
