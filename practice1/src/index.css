@@ -1,3 +1,5 @@
+@import './assets/fonts/stylesheet.css';
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,7 +45,7 @@ table {
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Satoshi', fallback-font, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -56,12 +58,29 @@ table {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* color  */
   --primary-color: #000000;
   --secondary-color: #FFFFFF;
 
   --border-color: #0000001A;
   --light-dark: #ffffffde;
   --orange-color: #FFC633;
+
+  /* font size  */
+  --font-size-xx-small: 12px;
+  --font-size-x-small: 14px;
+  --font-size-small: 16px;
+  --font-size-medium: 20px;
+  --font-size-large: 24px;
+  --font-size-x-large: 32px;
+  --font-size-xx-large: 36px;
+
+  /* height  */
+  --height-x-small: 20px;
+  --height-small: 22px;
+  --height-medium: 32px;
+  --height-large: 34x;
+  --height-x-large: 36x;
 }
 
 .full-width {

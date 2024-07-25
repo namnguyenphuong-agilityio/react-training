@@ -4,7 +4,7 @@ import './button.css';
 // ButtonProps will now include all the standard properties of an HTML button element,
 // such as disabled, form, name, type, and value and TypeScript will type check these properties
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: 'primary' | 'secondary';
+  variant: 'primary' | 'secondary' | 'tertiary';
   size: 'small' | 'medium' | 'large';
   label: string;
   isFullWidth?: boolean;

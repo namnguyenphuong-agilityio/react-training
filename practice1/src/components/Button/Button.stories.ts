@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button } from './Button';
+import { Button } from '.';
 
 const meta = {
   title: 'Example/Button',
@@ -27,6 +27,14 @@ export const Secondary: Story = {
   args: {
     size: 'medium',
     variant: 'secondary',
+    label: 'Button'
+  }
+};
+
+export const Tertiary: Story = {
+  args: {
+    size: 'medium',
+    variant: 'tertiary',
     label: 'Button'
   }
 };

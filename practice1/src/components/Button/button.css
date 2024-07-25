@@ -30,6 +30,10 @@
   color: var(--primary-color);
 }
 
+.button-tertiary {
+  color: var(--primary-color);
+}
+
 .button--small {
   font-size: 12px;
   padding: 10px 16px;
