@@ -1,0 +1,54 @@
+@import '../../index.css';
+
+.item-card {
+  width: 100%;
+}
+
+.item-card__image {
+  margin-bottom: 1%;
+}
+
+.item-card__title {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+}
+
+.rating__number {
+  font-size: var(--font-size-xx-small);
+  margin-left: 11px;
+}
+
+.rating__icon:not(:last-child) {
+  margin-right: 0.5%;
+}
+
+.item-card__rate,
+.item-card__price {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.item-card__price {
+  font-size: var(--font-size-medium);
+  font-weight: 700;
+}
+
+.item-card__price--discounted,
+.item-card__price--original {
+  margin-right: 1%;
+}
+
+.item-card__price--original.has-discount {
+  color: var(--disabled-color);
+  text-decoration: line-through;
+}
+
+.item-card__price--discount {
+  color: var(--discount-color);
+  border-radius: 20px;
+  background-color: var(--discount-bg-color);
+  font-size: var(--font-size-xxx-small);
+  padding: 6px 14px;
+}
