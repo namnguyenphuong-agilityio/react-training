@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ProductCard } from ".";
 import image from '../../assets/images/NA-t-shirt.png';
+import { ProductCard } from ".";
 const meta = {
   title: 'Example/ItemCard',
   component: ProductCard,
@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const ItemCardHasDiscount: Story = {
+export const ProductCardHasDiscount: Story = {
   args: {
     image: image,
     title: 'T-SHIRT WITH TAPE DETAILS',
@@ -23,7 +23,7 @@ export const ItemCardHasDiscount: Story = {
   }
 };
 
-export const ItemCardWithoutDiscount: Story = {
+export const ProductCardWithoutDiscount: Story = {
   args: {
     image: image,
     title: 'T-SHIRT WITH TAPE DETAILS WITHOUT DISCOUNT',
