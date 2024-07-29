@@ -26,26 +26,26 @@ const renderStars = (rate: number) => {
   return stars;
 };
 
-export const ItemCard = ({ image, title, rate, originalPrice, discount = 0 }: ItemCardProps) => {
+export const ProductCard = ({ image, title, rate, originalPrice, discount = 0 }: ItemCardProps) => {
   if (!Number.isInteger(originalPrice)) {
     throw new Error('Price must be an integer');
   }
 
   const discountedPrice = originalPrice * (1 - discount / 100);
   return (
-    <div className='item-card'>
-      <img src={image} alt={title} className='item-card__image' />
-      <h3 className='item-card__title'>{title}</h3>
-      <div className='item-card__rate'>
+    <div className='product-card'>
+      <img src={image} alt={title} className='product-card__image' />
+      <h3 className='product-card__title'>{title}</h3>
+      <div className='product-card__rate'>
         {renderStars(rate)}
         <span className='rating__number'>{rate}/5</span>
       </div>
-      <div className='item-card__price'>
-        {discount !== 0 && <p className='item-card__price--discounted'>${discountedPrice}</p>}
-        <span className={`item-card__price--original ${discount !== 0 ? 'has-discount' : ''}`}>
+      <div className='product-card__price'>
+        {discount !== 0 && <p className='product-card__price--discounted'>${discountedPrice}</p>}
+        <span className={`product-card__price--original ${discount !== 0 ? 'has-discount' : ''}`}>
           ${originalPrice}
         </span>
-        {discount !== 0 && <span className='item-card__price--discount'>-{discount}%</span>}
+        {discount !== 0 && <span className='product-card__price--discount'>-{discount}%</span>}
       </div>
     </div>
   );

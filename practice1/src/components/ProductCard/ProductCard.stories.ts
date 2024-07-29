@@ -1,14 +1,14 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ItemCard } from ".";
+import { ProductCard } from ".";
 import image from '../../assets/images/NA-t-shirt.png';
 const meta = {
   title: 'Example/ItemCard',
-  component: ItemCard,
+  component: ProductCard,
   parameters: {
     layout: 'fullscreen'
   },
   tags: ['autodocs']
-} satisfies Meta<typeof ItemCard>;
+} satisfies Meta<typeof ProductCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

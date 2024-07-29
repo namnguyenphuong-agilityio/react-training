@@ -1,14 +1,14 @@
 @import '../../index.css';
 
-.item-card {
+.product-card {
   width: 100%;
 }
 
-.item-card__image {
+.product-card__image {
   margin-bottom: 1%;
 }
 
-.item-card__title {
+.product-card__title {
   font-size: var(--font-size-small);
   font-weight: 700;
 }
@@ -22,30 +22,30 @@
   margin-right: 0.5%;
 }
 
-.item-card__rate,
-.item-card__price {
+.product-card__rate,
+.product-card__price {
   display: flex;
   align-items: center;
   margin-top: 1%;
   margin-bottom: 1%;
 }
 
-.item-card__price {
+.product-card__price {
   font-size: var(--font-size-medium);
   font-weight: 700;
 }
 
-.item-card__price--discounted,
-.item-card__price--original {
+.product-card__price--discounted,
+.product-card__price--original {
   margin-right: 1%;
 }
 
-.item-card__price--original.has-discount {
+.product-card__price--original.has-discount {
   color: var(--disabled-color);
   text-decoration: line-through;
 }
 
-.item-card__price--discount {
+.product-card__price--discount {
   color: var(--discount-color);
   border-radius: 20px;
   background-color: var(--discount-bg-color);
