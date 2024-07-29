@@ -25,3 +25,24 @@ export const PriceWithoutDiscount: Story = {
     originalPrice: 300
   }
 };
+export const OriginalPriceLessThan0: Story = {
+  args: {
+    originalPrice: -100,
+    discount: 10
+  }
+};
+
+
+export const DiscountLessThan0: Story = {
+  args: {
+    originalPrice: 300,
+    discount: -10
+  }
+};
+
+export const DiscountMoreThan100: Story = {
+  args: {
+    originalPrice: 300,
+    discount: 200
+  }
+};

@@ -12,14 +12,26 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const RatingWithNonIntegerScore: Story = {
+export const NonIntegerScore: Story = {
   args: {
     rate: 4.5
   }
 };
 
-export const RatingWithIntegerScore: Story = {
+export const IntegerScore: Story = {
   args: {
     rate: 5
+  }
+};
+
+export const ScoreLessThan1: Story = {
+  args: {
+    rate: -4.5
+  }
+};
+
+export const ScoreMoreThan5: Story = {
+  args: {
+    rate: 15
   }
 };

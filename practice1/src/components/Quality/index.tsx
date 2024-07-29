@@ -7,6 +7,9 @@ interface QualityProps {
 }
 
 export const Quality = ({ quantity, label }: QualityProps) => {
+  if (quantity.startsWith('-')) {
+    quantity = String(quantity).substring(1);
+  }
   return (
     <div className="quality">
       <p className="quality__number">{quantity}</p>

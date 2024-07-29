@@ -31,3 +31,12 @@ export const ProductCardWithoutDiscount: Story = {
     originalPrice: 300
   }
 };
+
+export const ProductCardWithOriginalPriceLessThan0: Story = {
+  args: {
+    image: image,
+    title: 'T-SHIRT WITH TAPE DETAILS WITHOUT DISCOUNT',
+    rate: 5,
+    originalPrice: -300
+  }
+};

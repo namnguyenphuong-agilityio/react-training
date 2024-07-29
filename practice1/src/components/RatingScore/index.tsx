@@ -7,6 +7,10 @@ interface RatingScoreProps {
 }
 
 export const RatingScore = ({ rate }: RatingScoreProps) => {
+  // If rate is less than 1, it will be set to 1.
+  // If rate is more than 5, it will be set to 5
+  rate = Math.min(Math.max(rate, 1), 5);
+
   const fullStars = Math.floor(rate);
   const hasHalfStar = rate % 1 !== 0;
   const stars = [];
@@ -18,5 +22,5 @@ export const RatingScore = ({ rate }: RatingScoreProps) => {
   if (hasHalfStar) {
     stars.push(<HalfStarIcon key={fullStars} className='rating__icon' />);
   }
-  return stars;
+  return <>{stars}</>;
 };
