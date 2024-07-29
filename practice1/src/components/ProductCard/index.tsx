@@ -1,5 +1,5 @@
-import Price from '../Price';
 import { RatingScore } from '../RatingScore';
+import Price from './Price';
 import './productCard.css';
 
 // Discount is represented as a percentage

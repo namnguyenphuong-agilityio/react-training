@@ -2,10 +2,10 @@ import './price.css'
 
 interface PriceProps {
   originalPrice: number;
-  discount: number;
+  discount?: number;
 }
 
-const Price = ({ originalPrice, discount }: PriceProps) => {
+const Price = ({ originalPrice, discount = 0 }: PriceProps) => {
   const discountedPrice = originalPrice * (1 - discount / 100);
 
   const originalPriceValue = Number.isInteger(originalPrice) ? originalPrice : originalPrice.toFixed(2);

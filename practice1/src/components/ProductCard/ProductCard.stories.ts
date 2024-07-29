@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import image from '../../assets/images/NA-t-shirt.png';
 import { ProductCard } from ".";
 const meta = {
-  title: 'Example/ItemCard',
+  title: 'Example/ProductCard',
   component: ProductCard,
   parameters: {
     layout: 'fullscreen'
