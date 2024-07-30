@@ -1,0 +1,27 @@
+@import '../../index.css';
+
+.product-card {
+  width: 100%;
+}
+
+.product-card__image {
+  margin-bottom: 1%;
+}
+
+.product-card__title {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+}
+
+.rating__number {
+  font-size: var(--font-size-xx-small);
+  margin-left: 11px;
+}
+
+.product-card__rate,
+.price {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}

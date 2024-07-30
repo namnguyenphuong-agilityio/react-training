@@ -65,8 +65,15 @@ table {
   --border-color: #0000001A;
   --light-dark: #ffffffde;
   --orange-color: #FFC633;
+  --disabled-color: #00000066;
+  --discount-color: #FF3333;
+  --discount-bg-color: #FF33331A;
+
+  ;
+
 
   /* font size  */
+  --font-size-xxx-small: 10px;
   --font-size-xx-small: 12px;
   --font-size-x-small: 14px;
   --font-size-small: 16px;

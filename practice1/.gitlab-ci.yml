@@ -26,6 +26,8 @@ build_storybook:
 
 deploy_to_vercel:
   stage: deploy
+  needs:
+    - build_storybook
   image: node:20
   before_script:
     - cd practice1
