@@ -1,3 +1,10 @@
-.rating__icon:not(:last-child) {
-  margin-right: 0.5%;
+.rating__icons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5%;
+  overflow-x: hidden;
+}
+
+.rating__icon {
+  flex-shrink: 0;
 }

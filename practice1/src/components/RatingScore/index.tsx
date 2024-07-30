@@ -22,5 +22,5 @@ export const RatingScore = ({ rate }: RatingScoreProps) => {
   if (hasHalfStar) {
     stars.push(<HalfStarIcon key={fullStars} className='rating__icon' />);
   }
-  return <>{stars}</>;
+  return <div className='rating__icons'>{stars}</div>;
 };
