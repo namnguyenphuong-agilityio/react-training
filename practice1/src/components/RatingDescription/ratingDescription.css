@@ -1,0 +1,14 @@
+@import '../../index.css';
+
+.rating-description {
+   max-width: 600px;
+}
+
+.rating__author {
+  font-size: var(--font-size-small);
+  font-weight: 700;
+}
+
+.rating__text {
+  color: var(--tertiary-color);
+}
