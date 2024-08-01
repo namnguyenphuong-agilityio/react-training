@@ -1,6 +1,6 @@
 import HalfStarIcon from '../icons/HalfStarIcon';
 import StarIcon from '../icons/StarIcon';
-import './rating.css';
+import './ratingScore.css';
 
 interface RatingScoreProps {
   rate: number;

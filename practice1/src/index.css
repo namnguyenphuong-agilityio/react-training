@@ -61,6 +61,7 @@ table {
   /* color  */
   --primary-color: #000000;
   --secondary-color: #FFFFFF;
+  --tertiary-color: #00000099;
 
   --border-color: #0000001A;
   --light-dark: #ffffffde;
