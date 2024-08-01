@@ -2,11 +2,17 @@
 
 .rating-description {
    max-width: 600px;
+   border: 1px solid var(--border-color);
+   border-radius: 30px;
+   padding: 24px;
 }
 
 .rating__author {
   font-size: var(--font-size-small);
   font-weight: 700;
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
 }
 
 .rating__text {

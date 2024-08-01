@@ -1,4 +1,5 @@
 import { RatingScore } from "../RatingScore";
+import TickIcon from "../icons/TickIcon";
 import './ratingDescription.css';
 
 interface RatingDescriptionProps {
@@ -11,7 +12,10 @@ export const RatingDescription = ({ rate = 5, author, description }: RatingDescr
   return (
     <div className="rating-description">
       <RatingScore rate={rate} />
-      <h5 className="rating__author">{author}</h5>
+      <div className="rating__author">
+        <h5>{author}</h5>
+        <TickIcon width={19} height={19} fill="#01AB31"/>
+      </div>
       <p className="rating__text">{description}</p>
     </div>
   );
