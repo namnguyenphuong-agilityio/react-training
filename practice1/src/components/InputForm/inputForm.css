@@ -1,0 +1,21 @@
+@import '../../index.css';
+
+.input-form {
+  display: flex;
+  background-color: var(--secondary-color);
+  align-items: center;
+  border-radius: 60px;
+  border: 1px solid var(--border-color);
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.input-form input {
+  border: none;
+  width: 100%;
+}
+
+.input-form input:focus-visible {
+  outline: none;
+  border: none;
+}
