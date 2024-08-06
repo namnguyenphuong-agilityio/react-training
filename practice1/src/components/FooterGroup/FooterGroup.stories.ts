@@ -14,7 +14,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const InputFormEx: Story = {
+export const FooterGroupExample: Story = {
   args: {
     links: [
       { text: 'About', href: '/about' },

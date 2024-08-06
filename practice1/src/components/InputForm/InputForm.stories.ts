@@ -15,7 +15,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const InputFormEx: Story = {
+export const InputFormExample: Story = {
   args: {
     Icon: GmailIcon,
     placeholder: 'Enter your email address'
