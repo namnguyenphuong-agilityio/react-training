@@ -1,0 +1,25 @@
+@import '../../index.css';
+
+.footer-group{
+  font-size: var(--font-size-x-small);
+}
+
+.footer-group__title {
+  font-weight: 500;
+}
+
+.footer-group__link {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.footer-group__item {
+  margin-top: 16px;
+}
+
+.footer-group__link:hover,
+.footer-group__link:active,
+.footer-group__link:focus {
+  text-decoration: underline;
+  cursor: pointer;
+}

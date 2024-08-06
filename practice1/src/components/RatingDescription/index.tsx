@@ -13,7 +13,7 @@ export const RatingDescription = ({ rate = 5, author, description }: RatingDescr
     <div className="rating-description">
       <RatingScore rate={rate} />
       <div className="rating__author">
-        <h5>{author}</h5>
+        <h3>{author}</h3>
         <TickIcon width={19} height={19} fill="#01AB31"/>
       </div>
       <p className="rating__text">{description}</p>
