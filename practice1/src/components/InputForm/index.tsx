@@ -6,7 +6,7 @@ interface InputFormProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export const InputForm = ({ Icon, placeholder }: InputFormProps) => {
   return (
-    <div className="input-form">
+    <div className="input-field">
       <Icon className="input__icon"/>
       <input placeholder={placeholder} />
     </div>

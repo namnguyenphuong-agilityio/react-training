@@ -1,6 +1,6 @@
 @import '../../index.css';
 
-.input-form {
+.input-field {
   display: flex;
   background-color: var(--secondary-color);
   align-items: center;
@@ -10,12 +10,12 @@
   gap: 12px;
 }
 
-.input-form input {
+.input-field input {
   border: none;
   width: 100%;
 }
 
-.input-form input:focus-visible {
+.input-field input:focus-visible {
   outline: none;
   border: none;
 }
