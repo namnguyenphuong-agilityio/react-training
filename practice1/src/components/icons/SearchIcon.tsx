@@ -1,9 +1,10 @@
 import { SVGProps } from 'react';
 
-const SearchIcon = ({ width = '24', height = '24' }: SVGProps<SVGSVGElement>) => (
+const SearchIcon = ({ width = '24', height = '24', onClick }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}
+    onClick={onClick}
     viewBox='0 0 24 24'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'

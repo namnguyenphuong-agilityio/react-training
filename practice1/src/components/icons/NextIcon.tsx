@@ -1,9 +1,10 @@
 import { SVGProps } from 'react';
 
-const NextIcon = ({ width = '14', height = '14' }: SVGProps<SVGSVGElement>) => (
+const NextIcon = ({ width = '14', height = '14', className }: SVGProps<SVGSVGElement>) => (
   <svg
     width={width}
     height={height}
+    className={className}
     viewBox='0 0 14 15'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'

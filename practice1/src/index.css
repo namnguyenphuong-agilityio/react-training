@@ -50,7 +50,7 @@ table {
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--light-dark);
+  color: var(--light-dark-color);
   background-color: var(--primary-color);
 
   font-synthesis: none;
@@ -64,12 +64,14 @@ table {
   --tertiary-color: #00000099;
 
   --border-color: #0000001A;
-  --light-dark: #ffffffde;
+  --light-dark-color: #ffffffde;
+  --dark-light-color: #F0EEED;
+
   --orange-color: #FFC633;
   --disabled-color: #00000066;
   --discount-color: #FF3333;
   --discount-bg-color: #FF33331A;
-
+  --hover-icon-color: #00000080
   ;
 
 
@@ -94,6 +96,17 @@ table {
 .full-width {
   width: 100%;
   display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 
