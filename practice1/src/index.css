@@ -109,6 +109,10 @@ a:focus {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {

@@ -8,20 +8,28 @@
 .navbar-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .navbar {
-  padding: 0 16px;
+  min-height: 48px;
 }
 
-.navbar__top,
-.navbar-wrapper {
+.navbar,
+.navbar__top{
   gap: 50px;
 }
 
 .navbar__icon {
   gap: 10px;
+  justify-content: right;
+}
+
+.navbar__logo {
+  margin-right: 30px;
+}
+.navbar-wrapper,
+.input-field {
+  flex: 1;
 }
 
 .navbar__top,
@@ -36,35 +44,35 @@
   font-weight: 400;
   padding: 10px 10px;
   gap: 7px;
+  white-space: nowrap;
+  justify-content: space-between;
 }
 
-.navbar,
 .navbar__items,
 .submenu__items {
-  display: flex;
-  flex-direction: row;
-  background-color: inherit;
+  position: absolute;
+  width: fit-content;
+  border-bottom:  1px solid var(--border-color);
+  border-right:  1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+.dropdown-icon{
+  display: none;
 }
 
 .navbar__items {
-  width: fit-content;
-}
-
-.navbar__items.column,
-.submenu__items {
-  background-color: var(--dark-light-color);
-  flex-direction: column;
-  position: absolute;
-}
-
-.navbar__items.column {
-  left: 1%;
+  left: 0;
   top: 4%;
 }
 
-.submenu__items.column {
+.submenu__items {
   left: 100%;
   top: 0;
+}
+
+.navbar__icon svg{
+  min-width: 24px;
 }
 
 .navbar__link:hover,
@@ -74,14 +82,53 @@
 .submenu__link:focus,
 .submenu__link:active {
   background-color: var(--tertiary-color);
+  text-decoration: none;
 }
 
+.navbar__toggle-icon:hover,
 .navbar__icon svg:hover {
   cursor: pointer;
   transform: scale(1.2);
   opacity: 0.8;
 }
 
-.navbar__icon.input-field {
-  margin-right: 15px;
+@media (max-width: 600px) {
+  .input-field {
+    display: none !important;
+  }
 }
+
+@media (min-width: 601px) {
+  .search-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar__toggle-icon,
+  .next-icon {
+    display: none;
+  }
+
+  .navbar_menu {
+    display: flex !important;
+  }
+
+  .navbar__items {
+    display: flex;
+    border: none;
+    position: relative;
+    flex-direction: row;
+  }
+
+  .submenu__items{
+    top: 100%;
+    left: 0;
+    border-left:  1px solid var(--border-color);
+  }
+
+  .dropdown-icon {
+    display: block;
+  }
+}
+

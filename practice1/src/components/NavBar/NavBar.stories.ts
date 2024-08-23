@@ -11,9 +11,6 @@ const meta = {
   argTypes: {
     navLinks: {
       description: 'List of links to display in NavBar',
-    },
-    isHamburger: {
-      description: 'Specify if the NavBar display a hamburger icon or not',
     }
   }
 } satisfies Meta<typeof NavBar>;
@@ -27,16 +24,9 @@ const navLinks =[
   { href: '/new', text: 'New Arrivals' },
   { href: '/brands', text: 'Brands' }
 ];
-export const NavBarWithHamburger: Story = {
+export const NavigationBar: Story = {
   args: {
-    navLinks: navLinks,
-    isHamburger: true
+    navLinks: navLinks
   }
 };
 
-export const NavBarWithoutHamburger: Story = {
-  args: {
-    navLinks: navLinks,
-    isHamburger: false
-  }
-};

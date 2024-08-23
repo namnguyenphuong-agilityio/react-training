@@ -1,13 +1,8 @@
-import HamburgerIcon from '../icons/HamburgerIcon';
 import logo from '../../assets/images/logo.svg';
 import { useState } from 'react';
 import './navbar.css';
-import NextIcon from '../icons/NextIcon';
-import SearchIcon from '../icons/SearchIcon';
-import CardIcon from '../icons/CardIcon';
-import AvatarIcon from '../icons/AvatarIcon';
-import DropDownIcon from '../icons/DropDownIcon';
 import { InputForm } from '../InputForm';
+import { AvatarIcon, CardIcon, DropDownIcon, HamburgerIcon, NextIcon, SearchIcon } from '../icons';
 
 interface Link {
   href: string;
@@ -17,7 +12,7 @@ interface Link {
 
 interface NavBarProps {
   navLinks?: Link[];
-  isHamburger?: boolean;
+  isNavbarIconVisible?: boolean;
 }
 
 const defaultLinks: Link[] = [
@@ -34,62 +29,70 @@ const defaultLinks: Link[] = [
   { href: '/brands', text: 'Brands' }
 ];
 
-const NavBar = ({ navLinks = defaultLinks, isHamburger = false }: NavBarProps) => {
-  const [isMenuVisible, setMenusVisible] = useState(!isHamburger);
+const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
+  const [isMenuVisible, setMenuVisible] = useState(false);
   const [isLinksVisible, setLinksVisible] = useState(false);
   const [isSearchFormVisible, setSearchFormVisible] = useState(false);
+  const [activeLink, setActiveLink] = useState('');
 
-  const toggleLinks = () => setMenusVisible((prevState) => isHamburger && !prevState);
-
-  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    setLinksVisible(!isLinksVisible);
+  const toggleLinks = () => {
+    setMenuVisible((prevState) => !prevState);
+    setLinksVisible(false);
   };
 
-  const handleSearchIconClick = () => {setSearchFormVisible(!isSearchFormVisible)};
+  const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    event.preventDefault();
+
+    setLinksVisible(!isLinksVisible);
+    setActiveLink(href);
+  };
+
+  const handleSearchIconClick = () => {
+    setSearchFormVisible(!isSearchFormVisible);
+  };
 
   const renderLinks = (links: Link[], linkType: string) => (
-    <ul className={`${linkType}__items ${isHamburger ? 'column' : 'row'}`}>
+    <ul className={`${linkType}__items`}>
       {links.map((link, index) => {
         const hasSubLinks = link.subLinks && link.subLinks.length > 0;
         return (
           <li key={index} className={`${linkType}__item`}>
             <a
-              href={link.href}
-              className={`${linkType}__link`}
-              onClick={(event) => handleLinkClick(event)}
+              href='#'
+              className={`${linkType}__link ${link.href === activeLink ? 'active' : ''}`}
+              onClick={hasSubLinks ? (event) => handleLinkClick(event, link.href) : undefined}
             >
               {link.text}
-              {isHamburger && hasSubLinks && <NextIcon />}
-              {!isHamburger && hasSubLinks && (
-                <DropDownIcon width={11} height={6} />
-              )}
+              {hasSubLinks && <NextIcon className='next-icon' />}
+              {hasSubLinks && <DropDownIcon width={11} height={6} className='dropdown-icon' />}
             </a>
             {isLinksVisible && hasSubLinks && renderLinks(link.subLinks || [], 'submenu')}
           </li>
-        )
+        );
       })}
     </ul>
   );
 
   return (
-    <nav className={`navbar`}>
+    <nav className='navbar'>
       <div className='navbar-wrapper'>
         <div className='navbar__top'>
-          {isHamburger && <HamburgerIcon className='navbar__icon' onClick={toggleLinks} />}
-          <a href='/about'>
+          <HamburgerIcon className='navbar__toggle-icon' onClick={toggleLinks} />
+          <a href='#'>
             <img src={logo} alt='logo' className='navbar__logo' />
           </a>
         </div>
 
-        {isMenuVisible && <div className='navbar__menu'>{renderLinks(navLinks, 'navbar')}</div>}
+        <div className={`navbar_menu ${isMenuVisible ? '' : 'hide'}`}>
+          {renderLinks(navLinks, 'navbar')}
+        </div>
       </div>
 
+      <InputForm Icon={SearchIcon} placeholder='Search for products...' />
       <div className='navbar__icon'>
-        {isHamburger && !isSearchFormVisible && <SearchIcon onClick={handleSearchIconClick} />}
-        {(!isHamburger || isSearchFormVisible) && <InputForm Icon={SearchIcon} placeholder='Search for products...' />}
-        <CardIcon width={24} height={24}/>
-        <AvatarIcon width={24} height={24}/>
+        <SearchIcon className='search-icon' onClick={handleSearchIconClick} />
+        <CardIcon width={24} height={24} />
+        <AvatarIcon width={24} height={24} />
       </div>
     </nav>
   );
