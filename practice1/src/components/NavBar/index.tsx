@@ -88,7 +88,7 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
         </div>
       </div>
 
-      <InputForm Icon={SearchIcon} placeholder='Search for products...' />
+      <InputForm Icon={SearchIcon} customClassNames='search-form' placeholder='Search for products...' />
       <div className='navbar__icon'>
         <SearchIcon className='search-icon' onClick={handleSearchIconClick} />
         <CardIcon width={24} height={24} />
