@@ -1,5 +1,5 @@
 import logo from '../../assets/images/logo.svg';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './navbar.css';
 import { InputForm } from '../InputForm';
 import { AvatarIcon, CardIcon, DropDownIcon, HamburgerIcon, NextIcon, SearchIcon } from '../icons';
@@ -32,7 +32,6 @@ const defaultLinks: Link[] = [
 const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [isLinksVisible, setLinksVisible] = useState(false);
-  const [isSearchFormVisible, setSearchFormVisible] = useState(false);
   const [activeLink, setActiveLink] = useState('');
 
   const toggleLinks = () => {
@@ -47,8 +46,13 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
     setActiveLink(href);
   };
 
-  const handleSearchIconClick = () => {
-    setSearchFormVisible(!isSearchFormVisible);
+  const handleKeyDown = (event: React.KeyboardEvent<SVGSVGElement>, callback: () => void) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      callback();
+    }
+    if(event.key === 'Escape' && isMenuVisible){
+      callback();
+    }
   };
 
   const renderLinks = (links: Link[], linkType: string) => (
@@ -60,6 +64,7 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
             <a
               href='#'
               className={`${linkType}__link ${link.href === activeLink ? 'active' : ''}`}
+              {...(hasSubLinks ? { 'aria-expanded': isLinksVisible } : {})}
               onClick={hasSubLinks ? (event) => handleLinkClick(event, link.href) : undefined}
             >
               {link.text}
@@ -77,7 +82,13 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
     <nav className='navbar'>
       <div className='navbar-wrapper'>
         <div className='navbar__top'>
-          <HamburgerIcon className='navbar__toggle-icon' onClick={toggleLinks} />
+          <HamburgerIcon
+            className={`navbar__toggle-icon ${isMenuVisible ? 'highlighted' : ''}`}
+            isExpanded={isMenuVisible}
+            onClick={toggleLinks}
+            role='button'
+            onKeyDown={(event) => handleKeyDown(event, toggleLinks)}
+          />
           <a href='#'>
             <img src={logo} alt='logo' className='navbar__logo' />
           </a>
@@ -88,9 +99,13 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
         </div>
       </div>
 
-      <InputForm Icon={SearchIcon} customClassNames='search-form' placeholder='Search for products...' />
+      <InputForm
+        Icon={SearchIcon}
+        customClassNames='search-form'
+        placeholder='Search for products...'
+      />
       <div className='navbar__icon'>
-        <SearchIcon className='search-icon' onClick={handleSearchIconClick} />
+        <SearchIcon className='search-icon' />
         <CardIcon width={24} height={24} />
         <AvatarIcon width={24} height={24} />
       </div>

@@ -5,6 +5,7 @@ const SearchIcon = ({ width = '24', height = '24', className, onClick }: SVGProp
     width={width}
     height={height}
     className={className}
+    tabIndex={0}
     onClick={onClick}
     viewBox='0 0 24 24'
     fill='none'

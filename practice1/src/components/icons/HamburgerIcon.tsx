@@ -1,11 +1,25 @@
 import { SVGProps } from 'react';
 
-const HamburgerIcon = ({ width = '24', height = '24', className, onClick }: SVGProps<SVGSVGElement>) => (
+interface HamburgerIconProps extends SVGProps<SVGSVGElement> {
+  isExpanded?: boolean;
+}
+
+const HamburgerIcon = ({
+  width = '24',
+  height = '24',
+  className,
+  isExpanded = false,
+  onClick,
+  onKeyDown,
+}: HamburgerIconProps) => (
   <svg
     width={width}
     height={height}
     className={className}
+    aria-expanded={isExpanded}
+    tabIndex={0}
     onClick={onClick}
+    onKeyDown={onKeyDown}
     viewBox='0 0 24 24'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
