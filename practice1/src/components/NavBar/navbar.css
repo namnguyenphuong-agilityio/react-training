@@ -63,7 +63,7 @@
 
 .navbar__items {
   left: 2%;
-  top: 5%;
+  top: 6%;
 }
 
 .submenu__items {
@@ -97,7 +97,7 @@
 
 .highlighted {
   background-color: var(--hover-icon-color);
-  border: 2px solid var(--tertiary-color);
+  outline: -webkit-focus-ring-color auto 5px;
   border-radius: 3px;
 }
 
