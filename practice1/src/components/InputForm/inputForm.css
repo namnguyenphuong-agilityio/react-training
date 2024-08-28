@@ -2,20 +2,24 @@
 
 .input-field {
   display: flex;
-  background-color: var(--secondary-color);
   align-items: center;
   border-radius: 60px;
   border: 1px solid var(--border-color);
-  padding: 12px 16px;
+  padding: 10px 16px;
   gap: 12px;
 }
 
 .input-field input {
   border: none;
   width: 100%;
+  background-color: inherit;
 }
 
 .input-field input:focus-visible {
   outline: none;
   border: none;
+}
+
+.input-field:focus-within {
+  border: 1px solid var(--tertiary-color);
 }
