@@ -33,6 +33,7 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [isLinksVisible, setLinksVisible] = useState(false);
   const [activeLink, setActiveLink] = useState('');
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleLinks = () => {
     setMenuVisible((prevState) => !prevState);
@@ -41,7 +42,6 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
 
   const handleLinkClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     event.preventDefault();
-
     setLinksVisible(!isLinksVisible);
     setActiveLink(href);
   };
@@ -54,6 +54,19 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
       callback();
     }
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (isMenuVisible && menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      setMenuVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuVisible]);
 
   const renderLinks = (links: Link[], linkType: string) => (
     <ul className={`${linkType}__items`}>
@@ -80,7 +93,7 @@ const NavBar = ({ navLinks = defaultLinks }: NavBarProps) => {
 
   return (
     <nav className='navbar'>
-      <div className='navbar-wrapper'>
+      <div className='navbar-wrapper' ref={menuRef}>
         <div className='navbar__top'>
           <HamburgerIcon
             className={`navbar__toggle-icon ${isMenuVisible ? 'highlighted' : ''}`}
